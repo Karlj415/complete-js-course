@@ -1,125 +1,195 @@
-'use strict';
-
-/*
-let hasDriversLicense = false;
-const passTest = true;
-if (passTest) hasDriversLicense = true;
-if (hasDriversLicense) console.log('I can drive!');
-
-const interface = 'Audio' 
-const private = 1234;
-*/
-
-
-// Functions
-// function logger() {
-//     console.log('My name is KJ')
+// 'use strict';
+//
+// /*
+// function fruitProcessor(apples, oranges) {
+//     const juice = `One juice with ${apples} apples and ${oranges} oranges`;
+//     return juice;
 // }
 //
-// calling / running / invoking function
-// logger();
-// logger();
-// logger();
-
-/*
- calling function from other functions
-function cutFruitPieces(fruit) {
-    return fruit * 4;
-}
-
-function fruitProcessor(apples, oranges) {
-    const applePieces = cutFruitPieces(apples);
-    const orangePieces = cutFruitPieces(oranges);
-    return `Juice with ${applePieces} apples and ${orangePieces} oranges.`;
-}
-console.log(fruitProcessor(2, 3));
-*/
-/*
-const appleJuice = fruitProcessor(5, 0);
-console.log(appleJuice);
-
-const appleOrangeJuice = fruitProcessor(2, 4);
-console.log(appleOrangeJuice);
- */
-/*
-function calcAge1(birthYear) {
-    return 2025 - birthYear;
-}
-
-const age1 = calcAge1(1994);
-console.log(age1)
-
-const calcAge2 = function (birthYear) {
-    return 2025 - birthYear
-}
-
-const age2 = calcAge2(1994);
-console.log(age1, age2)
-
-
-function calcAge1(birthYear) {
-    return 2025 - birthYear;
-}
-*/
-// Function expression
-
-// Arrow function
-
-// const calcAge3 = birthYear => 2025 - birthYear;
+// let appleJuice = fruitProcessor(5, 0);
+// console.log(appleJuice);
+// console.log();
+// const appleOrangeJuice = fruitProcessor(2, 4);
+// console.log(appleOrangeJuice);
+// console.log();
+// const num = Number('23');
+//
+// // function declaration. can be called and turned into a variable before its defined
+// const age1 = calcAge1(1994);
+// console.log(age1);
+//
+// function calcAge1(birthYear) {
+//     return 2025 - birthYear;
+// }
+//
+//
+// // function expression
+// const calcAge2 = function (birthYear) {
+//     return 2025 - birthYear;
+// };
+// const age2 = calcAge2(1989);
+// console.log(age2);
+//
+// // arrow functions
+// let currentYear = 2025;
+//
+// const calcAge3 = birthYear => currentYear - birthYear;
 // const age3 = calcAge3(1994);
-// console.log(age3)
+// console.log(age3);
 //
 // const yearsUntilRetirement = (birthYear, firstName) => {
-//     const age = 2025 - birthYear;
+//     const age = currentYear - birthYear;
 //     const retirement = 65 - age;
-//      return retirement;
-//     return `${firstName} retires in ${retirement} years.`
+//     return `${firstName} retires in ${retirement} years`;
+// };
+//
+// console.log(yearsUntilRetirement(1994));
+// console.log(yearsUntilRetirement(1994, 'Karl'));
+//
+// function cutFruitPieces(fruit) {
+//     return fruit * 4;
 // }
-// console.log(yearsUntilRetirement(1994, 'KJ'));
-// console.log(yearsUntilRetirement(1999, 'Jay'));
+//
+// const fruitProcessor = function (apples, oranges) {
+//     const applePieces = cutFruitPieces(apples);
+//     const orangePieces = cutFruitPieces(oranges);
+//     const juice = `One juice with ${applePieces} apple slices and ${orangePieces} orange slices`;
+//     return juice;
+// };
+//
+// const cutFruits = fruitProcessor(2, 3);
+// console.log(cutFruits);
+//
+// const calcAge = function (birthYear) {
+//     return 2025 - birthYear;
+// };
+//
+// const yearsUntilRetirement = function (birthYear, firstName) {
+//     const age = calcAge(birthYear);
+//     const retirement = 65 - age;
+//     if (retirement > 0) {
+//         return `${firstName} retires in ${retirement} years`;
+//     } else {
+//         return `${firstName} can already retire`;
+//     }
+//
+// };
+//
+// function consoleLoggers() {
+//     const karlRetire = yearsUntilRetirement(1994, 'Karl');
+//     const andrewRetire = yearsUntilRetirement(1990, 'Andrew');
+//     const amyRetire = yearsUntilRetirement(1989, 'Amy');
+//     const sawyerRetire = yearsUntilRetirement(2021, 'Sawyer');
+//     console.log(andrewRetire);
+//     console.log(karlRetire);
+//     console.log(amyRetire);
+//     console.log(sawyerRetire);
+// }
+//
+// consoleLoggers();
+//
+//
+// const calcAverage = (a, b, c) => (a + b + c) / 3;
+// console.log(calcAverage(3, 4, 5));
+//
+// let scoreDolphins = Math.floor(calcAverage(1144, 23, 71));
+// let scoreKoalas = Math.floor(calcAverage(22165, 1541, 349));
+// const checkWinner = function (avgDolphins, avgKoalas) {
+//     if (avgDolphins >= 2 * avgKoalas) {
+//         console.log(`Dolphins win! Score: ${scoreDolphins}`);
+//     } else if (avgKoalas >= 2 * avgDolphins) {
+//         console.log(`Koalas win! Score: ${scoreKoalas}`);
+//     } else {
+//         console.log(`No winner, Dolphins score: ${scoreDolphins} and score Koalas: ${scoreKoalas}. Neither is double
+// the score of the other.`); } }; checkWinner(scoreDolphins, scoreKoalas); scoreDolphins = Math.floor(calcAverage(22,
+// 3, 15)); scoreKoalas = Math.floor(calcAverage(11, 13, 11)); checkWinner(scoreDolphins, scoreKoalas);  scoreKoalas =
+// Math.floor(calcAverage(11, 13, 11)); scoreDolphins = Math.floor(calcAverage(22, 3, 1511));
+// checkWinner(scoreDolphins, scoreKoalas);    const friend1 = 'Michael'; const friend2 = 'Steven'; const friend3 =
+// 'Peter';  const friends = ['Michael', 'Steven', 'Peter']; console.log(friends[0]); console.log(friends);
+// console.log(friends.length); console.log(friends[friends.length - 1]); friends[2] = 'Jay'; console.log(friends);
+// const firstName = 'Karl'; const kj = [firstName, 'Jung', 2025 - 1994, 'Programmer', friends]; console.log(kj); //
+// 1st index selects the friend's array, and the second index selects the first value in the array
+// console.log(kj[4][2]);  const calcAge = function (birthYear) { return 2025 - birthYear; };  const years = [1990,
+// 1994, 2021, 1950];  console.log(calcAge(years[1]));  const age1 = calcAge(years[0]); const age2 = calcAge(years[1]);
+// const age3 = calcAge(years[2]); const age4 = calcAge(years[3]); console.log(age1, age2, age3, age4);  */  const
+// friends = ['Michael', 'Steven', 'Peter']; // Push adds an element to the end friends.push('Jay');
+// console.log(friends); const newLength = friends.push('Jay'); // unshift adds an element to the beginning
+// console.log(newLength); // Logs length of the array friends.unshift('John'); console.log(friends); // pop removes an
+// element from the end friends.pop(); console.log(friends); const friendsPopped = friends.pop();
+// console.log(friendsPopped); // shift removes the first element friends.shift(); console.log(friends); // indexof
+// gives you index of selected element console.log(friends.indexOf('Steven')); // include returns true or false with
+// strict equality console.log(friends.includes('Steven')); console.log(friends.includes('Karl'));
 
-const calcAge = function (birthYear) {
-    return 2025 - birthYear;
+/* Write your code below. Good luck! 🙂 */
+
+// function calcTip(bill) {
+//     let tip;
+//     if (bill >= 50 && bill <= 300) {
+//         tip = bill * 0.15;
+//     } else {
+//         tip = bill * 0.20;
+//     }
+//     return tip;
+// }
+//
+// // Test the function
+// const testBill = 100;
+// console.log(`Test bill: $${testBill}, Tip: $${calcTip(testBill)}`);
+//
+// // Bills array
+// const bills = [125, 555, 44];
+//
+// // Tips array
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+//
+// // Totals array (bill + tip)
+// const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+//
+// console.log('Bills:', bills);
+// console.log('Tips:', tips);
+// console.log('Totals:', totals);
+//
+
+const karlsArray = ['Karl', 'Jung', 2025 - 1994, 'programmer',];
+
+const user = {
+    firstName: 'Karl',
+    middleName: undefined,
+    lastName: null,
+    age: null,
+    job: 'Programmer'
+};
+console.log(user);
+console.log(karlsArray);
+console.log(user.age, karlsArray[2]);
+console.log(user['lastName']);
+let age = 31;
+
+function getAllNames() {
+    user.lastName ??= 'Jung';
+    user.middleName ??= 'Humphrey';
+    user.age ??= age;
+    return {lastName: user.lastName, middleName: user.middleName, firstName: user.firstName};
 }
-const yearsUntilRetirement = function (birthYear, firstName) {
-    const age = calcAge(birthYear);
-    const retirement = 65 - age;
-    if (retirement > 0) {
-        return `${firstName} retires in ${retirement} years.`;
-    } else {
-        return `${firstName}, you may already retire!`;
+
+console.log(getAllNames());
+console.log(user);
+
+const question = prompt('What do you want to know about KJ? Choose between first name, middle name, last name, age, or job');
+
+function askMe() {
+    if (question == 'first name') {
+        alert(user.firstName);
+    } else if (question == 'last name') {
+        alert(user.lastName);
+    } else if (question == 'middle name') {
+        alert(user.middleName);
+    } else if (question === 'age') {
+        alert(user.age);
+    } else if (question === 'job') {
+        alert(user.job);
     }
 }
-console.log(yearsUntilRetirement(1994, 'Karl'));
-console.log(yearsUntilRetirement(1989, 'Amy'));
-console.log(yearsUntilRetirement(1950, 'Andrew'));
 
-/*  
- Function declaration: Can be used before its declared
- Function expression: Essentially a function value stored into a variable
- Arrow function: Great for quick one-line functions. Has no this keyword
-*/
-
-
-// Simple loop. Prints 10 to 0
-for (let i = 10; i > 0; i--) {
-    console.log(i);
-}
-
-/*
-const firstNameLoop = 'KJ'; //'Karl'
-
-for (let i = 0; i < firstNameLoop.length; i++) {
-    console.log(firstNameLoop[i]);
-}
-*/
-
-let numberList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'hello', 'world'];
-console.log(numberList[10], numberList[11].toUpperCase());
-
-// more arrow function practice
-
-const calcAge4 = birthYear => 2037;
-const age4 = calcAge4(1991);
-console.log(age4);
+askMe();
 
