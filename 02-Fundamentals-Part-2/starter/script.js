@@ -149,7 +149,7 @@
 // console.log('Tips:', tips);
 // console.log('Totals:', totals);
 //
-
+/*
 const karlsArray = ['Karl', 'Jung', 2025 - 1994, 'programmer',];
 
 const user = {
@@ -164,7 +164,7 @@ console.log(karlsArray);
 console.log(user.age, karlsArray[2]);
 console.log(user['lastName']);
 let age = 31;
-
+/*
 function getAllNames() {
     user.lastName ??= 'Jung';
     user.middleName ??= 'Humphrey';
@@ -176,7 +176,6 @@ console.log(getAllNames());
 console.log(user);
 
 const question = prompt('What do you want to know about KJ? Choose between first name, middle name, last name, age, or job');
-
 function askMe() {
     if (question == 'first name') {
         alert(user.firstName);
@@ -192,4 +191,40 @@ function askMe() {
 }
 
 askMe();
+const friends = ['Michael', 'Amy', 'Sawyer'];
 
+console.log(friends);
+console.log(`${user.firstName} is my name, I have ${friends.length} friends and my best friend is ${friends[0]}`);
+*/
+
+const karl = {
+    firstName: 'Karl',
+    lastName: 'Jung',
+    birthYear: 1994,
+    job: 'Programmer',
+    friends: ['Michael', 'Peter', 'Steven'], // random nade up names
+    hasDriversLicense: true,
+    currentYear: 2025,
+
+    // calcAge: function (birthYear) {
+    //     return 2025 - birthYear;
+    // }
+
+    calcAge: function () {
+        // console.log(this);
+        this.age = this.currentYear - this.birthYear;
+        return this.age;
+    }
+};
+console.log(`${karl.firstName} is`, karl.calcAge(),);
+console.log('As he was born in', karl.birthYear);
+console.log(`The current year is ${karl.currentYear}`);
+karl.location = 'New York City';
+console.log(karl);
+
+const birthday = (birthYear) => 2025 - birthYear;
+console.log(birthday(1994));
+
+let testArr = ['KJ', 'Karl', 'Sawyer', 'Amy', ['Jung', 'Piedra', 'Noah']];
+console.log(testArr);
+console.log(testArr[4][1]);
