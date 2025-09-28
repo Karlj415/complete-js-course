@@ -214,6 +214,10 @@ const karl = {
         // console.log(this);
         this.age = this.currentYear - this.birthYear;
         return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()} year old ${this.job}. He has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`;
     }
 };
 console.log(`${karl.firstName} is`, karl.calcAge(),);
@@ -227,4 +231,39 @@ console.log(birthday(1994));
 
 let testArr = ['KJ', 'Karl', 'Sawyer', 'Amy', ['Jung', 'Piedra', 'Noah']];
 console.log(testArr);
-console.log(testArr[4][1]);
+const marriedStatus = `${testArr[3]} ${testArr[4][1]} is married to ${testArr[1]} ${testArr[4][0]}. ${testArr[3]} is ${birthday(1989)} in October, and ${karl.firstName} turned ${karl.currentYear - karl.birthYear} in March.`;
+console.log(marriedStatus);
+
+if (karl.age === 31 && karl.firstName === 'Karl' && karl.hasDriversLicense === true && karl.job === 'Programmer') {
+    console.log(`Karl is a 31 year old Programmer. He has a driver's license.`);
+}
+
+console.log(karl.getSummary());
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        john.bmi = this.mass / (this.height * this.height);
+        return this.mass / (this.height * this.height);
+    }
+
+};
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        mark.bmi = this.mass / (this.height * this.height);
+        return this.mass / (this.height * this.height);
+    },
+};
+
+
+console.log(`${mark.fullName}'s BMI ${mark.calcBMI()} is higher than ${john.fullName}'s ${john.calcBMI()}`);
+
+
+console.log(mark);
+console.log(john);
