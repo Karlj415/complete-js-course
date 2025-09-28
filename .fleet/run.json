@@ -1,0 +1,9 @@
+{
+    "configurations": [
+        {
+            "type": "node",
+            "name": "Node.js configuration",
+            "file": "02-Fundamentals-Part-2/"
+        }
+    ]
+}
