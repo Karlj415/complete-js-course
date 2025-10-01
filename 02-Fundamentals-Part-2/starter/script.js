@@ -195,7 +195,7 @@ const friends = ['Michael', 'Amy', 'Sawyer'];
 
 console.log(friends);
 console.log(`${user.firstName} is my name, I have ${friends.length} friends and my best friend is ${friends[0]}`);
-*/
+
 
 const karl = {
     firstName: 'Karl',
@@ -267,3 +267,116 @@ console.log(`${mark.fullName}'s BMI ${mark.calcBMI()} is higher than ${john.full
 
 console.log(mark);
 console.log(john);
+
+
+for (let rep = 0; rep < 10; rep++) {
+    console.log(`Rep number: ${rep}`);
+}
+
+
+const karlArray = [
+    'Karl',
+    'Jung',
+    2025 - 1994,
+    'programmer',
+    ['Michael', 'Peter', 'Steven'],
+    false,
+    true,
+];
+
+const types = [];
+
+for (let i = 0; i < karlArray.length; i++) {
+    console.log(typeof karlArray[i], karlArray[i]);
+    // types[i] = typeof karlArray[i]
+    types.push(typeof karlArray[i]);
+}
+console.log('\n');
+console.log(types);
+
+const years = [1989, 1990, 1994, 2021];
+let ages = [];
+let currentYear = 2025;
+for (let i = 0; i < years.length; i++) {
+    ages.push(currentYear - years[i]);
+}
+console.log(ages);
+
+console.log(`Karl is ${ages[2]} and Amy is ${ages[0]}`);
+
+
+ 
+// continue and break
+console.log('\n');
+console.log('<--ONLY STRINGS-->');
+for (let i = 0; i < karlArray.length; i++) {
+    if (typeof karlArray[i] !== 'string') continue;
+
+    console.log(karlArray[i], typeof karlArray[i]);
+}
+console.log('<--ONLY NUMBERS-->');
+for (let i = 0; i < karlArray.length; i++) {
+    if (typeof karlArray[i] !== 'number') break;
+
+    console.log(karlArray[i], typeof karlArray[i]);
+}
+
+const karlArray = [
+    'Karl',
+    'Jung',
+    2025 - 1994,
+    'programmer',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+for (let i = karlArray.length - 1; i >= 0; i--) {
+    console.log(i, karlArray[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`-Starting exercise ${exercise}-`);
+
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Lifting repetition ${rep}`);
+    }
+}
+
+
+// while loop
+// for (let rep = 1; rep < 10; rep++) {
+//     console.log(`Lifting repetition ${rep}`);
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//     console.log(`lifting weights repetition ${rep}`);
+//     rep++;
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+    console.log(`you rolled ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log(`you finally rolled ${dice}`);
+}
+*/
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+tips = [];
+totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push(bills[i] + tip);
+}
+console.log(bills, tips, totals);
+
