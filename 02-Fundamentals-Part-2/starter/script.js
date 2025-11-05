@@ -380,3 +380,4 @@ for (let i = 0; i < bills.length; i++) {
 }
 console.log(bills, tips, totals);
 
+console.log('Hello');

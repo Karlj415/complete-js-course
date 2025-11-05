@@ -222,9 +222,5 @@ const bill = 275;
 //     tip = bill * 20 / 100;
 // }
 
-let tip = bill <= 300 && bill >= 50 ? bill * 0.15 :
-    bill * 0.2;
+let tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
 console.log(`bill: ${bill}, tip: ${tip}, total: ${bill + tip}`);
-
-
-
